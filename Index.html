@@ -1,1 +1,57 @@
-
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CJTF Rivers State Command Registration</title>
+<style>
+body{font-family:Arial,sans-serif;background:#eef3ee;margin:0;color:#222}
+header{background:#164a2b;color:white;text-align:center;padding:25px 12px}
+main{max-width:600px;margin:20px auto;padding:20px;background:white;border-radius:10px}
+label{display:block;margin-top:15px;font-weight:bold}
+input,select,textarea{width:100%;box-sizing:border-box;padding:12px;margin-top:6px;border:1px solid #aaa;border-radius:5px;font-size:16px}
+button{width:100%;padding:14px;margin-top:20px;background:#176638;color:white;border:0;border-radius:5px;font-size:17px}
+.notice{background:#fff3cd;padding:12px;line-height:1.5}
+</style>
+</head>
+<body>
+<header>
+<h1>CJTF RIVERS STATE COMMAND</h1>
+<p>Peace and Justice</p>
+<h2>Membership Registration</h2>
+</header>
+<main>
+<p>Welcome to the Civilian Joint Task Force Rivers State Command registration page.</p>
+<div class="notice"><b>Important:</b> Submitting this form does not confirm membership. All applications require approval by the State Commander.</div>
+<form id="form">
+<label>Full Name</label>
+<input name="name" required placeholder="Enter your full name">
+<label>Phone Number</label>
+<input name="phone" type="tel" required placeholder="Enter phone number">
+<label>Email Address (optional)</label>
+<input name="email" type="email" placeholder="Enter email address">
+<label>State of Residence</label>
+<input name="state" required placeholder="Enter your state">
+<label>Local Government Area</label>
+<input name="lga" required placeholder="Enter your LGA">
+<label>Age (18 or older)</label>
+<input name="age" type="number" min="18" required>
+<label>Previous Security Experience</label>
+<select name="experience" required>
+<option value="">Select an option</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+<label>Why do you want to join CJTF?</label>
+<textarea name="reason" rows="4" required></textarea>
+<button type="submit">Submit Application</button>
+</form>
+<p id="message"></p>
+<script>
+document.getElementById('form').addEventListener('submit',function(e){
+e.preventDefault();
+document.getElementById('message').textContent='This is a demonstration only. Your application has NOT been sent or saved. Secure storage must be configured before real registration.';
+});
+</script>
+</main>
+</body>
+  </html>
